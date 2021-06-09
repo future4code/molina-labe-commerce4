@@ -9,7 +9,7 @@ const Banner1 = styled.img`
 display: flex;
 justify-content: center;
 width: 100vw;
-max-height: 70vh;
+max-height: 55vh;
 `
 
 const Astronalt = styled.img`
