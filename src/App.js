@@ -19,6 +19,18 @@ function App() {
           Learn React
         </a>
       </header>
+=======
+import './App.css';
+import styled from 'styled-components'
+import Banner from './components/banner';
+
+
+
+
+function App() {
+  return (
+    <div >
+      <Banner></Banner>
     </div>
   );
 }
