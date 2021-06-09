@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 
 const Banner1 = styled.img`
-display: felx;
+display: flex;
 justify-content: center;
 width: 100vw;
 max-height: 70vh;
