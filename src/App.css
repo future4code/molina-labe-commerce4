@@ -15,21 +15,6 @@ header {
     height: 10%;
 }
 
-main {
-    min-height: 80%;
-    display: flex;
-}
-
-.menu-vertical {
-    flex-basis: 200px;
-    border-right-style: solid;
-    border-right-width: thin;
-}
-
-.botoes-meunu-vertical {
-    list-style-type: none;
-}
-
 .painel-de-videos {
     padding-left: 20px;
     padding-top: 20px;

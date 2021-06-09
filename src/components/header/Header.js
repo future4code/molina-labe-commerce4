@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ContainerHeader = styled.div 
-`
+const ContainerHeader = styled.div `
     background-color: #181114;
     color: #ffffff;
     display: flex;
@@ -12,11 +11,11 @@ const ContainerHeader = styled.div
 `
 
 function Header () {
-    return(
+    return (
         <ContainerHeader>
            <h1>LABEX</h1>
         </ContainerHeader>
     )
 }
 
-export default Header;
+export default Header
