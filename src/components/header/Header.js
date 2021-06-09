@@ -9,7 +9,6 @@ const ContainerHeader = styled.div
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    /*height: 20%;*/
 `
 
 function Header () {
