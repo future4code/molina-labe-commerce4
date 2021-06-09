@@ -10,7 +10,7 @@ const Banner = styled.img`
 display: felx;
 justify-content: center;
 width: 100vw;
-max-height: 55vh;
+max-height: 70vh;
 `
 
 const Astronalt = styled.img`
