@@ -14,6 +14,11 @@ const Produtos = styled.div `
 const ProdutosImg = styled.img `
     width: 100%;
     height: 200px;
+    border-radius: 35%;
+    transition: 1s;
+    &:hover {
+        border: 2px solid #d72d00;
+    }
 `
 
 
