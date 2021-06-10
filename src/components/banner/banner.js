@@ -1,6 +1,6 @@
 import React from 'react';
-import astronalt from '../images/astronaut-resized.png';
-import banner from '../images/banner.webp'
+import astronalt from '../../images/astronaut-resized.png';
+import banner from '../../images/banner.webp'
 import styled from 'styled-components'
 
 

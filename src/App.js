@@ -6,11 +6,11 @@ import Header from './components/header/Header';
 import FiltroValor from './components/filtroValor/FiltroValor'
 import Footer from './components/footer/Footer'
 import Produto from './components/produto/Produto'
-import FiltroOrdem from './components/filtroOrdem/filtroOrdem'
+import FiltroOrdem from './components/filtroOrdem/FiltroOrdem'
 
 
 import Carrinho from './components/carrinho/Carrinho'
-import Banner from './components/banner'
+import Banner from './components/banner/banner'
 
 const GlobalStyle = createGlobalStyle`
   
@@ -49,11 +49,13 @@ class App extends React.Component {
 
     render(){
         return (
-            <div>
+          <div>
             <GlobalStyle />
             <Header></Header>
+            <Banner></Banner>
                 <main>
              <FiltroValor />
+             <div>
              <FiltroOrdem /> 
     
              <SessaoProdutos>
@@ -66,23 +68,7 @@ class App extends React.Component {
                  <Produto />
                  <Produto />
              </SessaoProdutos>
-              <GlobalStyle />
-              <Header></Header>
-              <Banner />
-              <main>
-                <FiltroValor />
-    
-                <SessaoProdutos>
-                  <Produto />
-                  <Produto />
-                  <Produto />
-                  <Produto />
-                  <Produto />
-                  <Produto />
-                  <Produto />
-                  <Produto />
-                </SessaoProdutos>
-    
+             </div>
               <Carrinho />          
               </main>
             <Footer />
