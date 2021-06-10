@@ -9,8 +9,9 @@ const MenuFiltro = styled.div`
     flex-direction: column;
     align-items: center;
     flex-basis: 200px;
-    border-right-style: solid;
-    border-right-width: thick;
+    border-right-style: solid ;
+    border-right-width: thin;
+    border-right-color: #5100B5;
 `
 
 
