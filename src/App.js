@@ -6,6 +6,9 @@ import Header from './components/header/Header';
 import FiltroValor from './components/filtroValor/FiltroValor'
 import Footer from './components/footer/Footer'
 import Produto from './components/produto/Produto'
+import FiltroOrdem from './components/filtroOrdem/filtroOrdem'
+
+
 import Carrinho from './components/carrinho/Carrinho'
 import Banner from './components/banner'
 
@@ -47,6 +50,22 @@ class App extends React.Component {
     render(){
         return (
             <div>
+            <GlobalStyle />
+            <Header></Header>
+                <main>
+             <FiltroValor />
+             <FiltroOrdem /> 
+    
+             <SessaoProdutos>
+                 <Produto />
+                 <Produto />
+                 <Produto />
+                 <Produto />
+                 <Produto />
+                 <Produto />
+                 <Produto />
+                 <Produto />
+             </SessaoProdutos>
               <GlobalStyle />
               <Header></Header>
               <Banner />
