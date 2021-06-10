@@ -9,24 +9,34 @@ import Produto from './components/produto/Produto'
 import FiltroOrdem from './components/filtroOrdem/filtroOrdem'
 
 
+import Carrinho from './components/carrinho/Carrinho'
+import Banner from './components/banner'
 
 const GlobalStyle = createGlobalStyle`
+  
+
   body {
     margin: 0;
     padding: 0;
     width: 100%;
     font-family: Open-Sans, Helvetica, Sans-Serif;
+    background-color: #0d001d;
+    color: #fffeff;
   }
 
   main {
     /* min-height: 80%; */
     display: flex;
 }
+
+  h3 {
+    color: #d72d00;
+  }
+
   `
 
 const SessaoProdutos = styled.div `
- padding-left: 20px;
- padding-top: 20px;
+ padding: 0px;
  flex-grow: 1;
  display: grid;
  grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -56,11 +66,25 @@ class App extends React.Component {
                  <Produto />
                  <Produto />
              </SessaoProdutos>
+              <GlobalStyle />
+              <Header></Header>
+              <Banner />
+              <main>
+                <FiltroValor />
     
-                    <div> {/* CARRINHOS */}
+                <SessaoProdutos>
+                  <Produto />
+                  <Produto />
+                  <Produto />
+                  <Produto />
+                  <Produto />
+                  <Produto />
+                  <Produto />
+                  <Produto />
+                </SessaoProdutos>
     
-                    </div>
-                </main>
+              <Carrinho />          
+              </main>
             <Footer />
         </div>
         )

@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const ContainerFooter = styled.div `
     height: 10%;
-    background-color: grey;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
+    border-top: 1px solid #5100B5;
 `
 
 function Footer () {
