@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Produtos = styled.div `
+const ProdutoCard = styled.div `
     display: grid;
     grid-template-rows: 3fr 1fr;
     grid-template-columns: 1fr;
@@ -27,10 +27,10 @@ class Produto extends React.Component {
     render() {
         return (
   
-                <Produtos>
+                <ProdutoCard>
                     <ProdutosImg src="https://picsum.photos/400/400?a=1 " alt="" />
                     <h4>titulo</h4>
-                </Produtos>
+                </ProdutoCard>
         )
     }
 }
