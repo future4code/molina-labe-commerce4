@@ -7,8 +7,6 @@ import FiltroValor from './components/filtroValor/FiltroValor'
 import Footer from './components/footer/Footer'
 import Produto from './components/produto/Produto'
 import FiltroOrdem from './components/filtroOrdem/FiltroOrdem'
-
-
 import Carrinho from './components/carrinho/Carrinho'
 import Banner from './components/banner/banner'
 
