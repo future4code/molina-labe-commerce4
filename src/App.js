@@ -6,6 +6,9 @@ import Header from './components/header/Header';
 import FiltroValor from './components/filtroValor/FiltroValor'
 import Footer from './components/footer/Footer'
 import Produto from './components/produto/Produto'
+import FiltroOrdem from './components/filtroOrdem/filtroOrdem'
+
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -41,6 +44,7 @@ class App extends React.Component {
             <Header></Header>
                 <main>
              <FiltroValor />
+             <FiltroOrdem /> 
     
              <SessaoProdutos>
                  <Produto />
