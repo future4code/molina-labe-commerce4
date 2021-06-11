@@ -44,6 +44,8 @@ const SessaoProdutos = styled.div `
 
 
 
+
+
 class App extends React.Component {
 
     render(){
@@ -51,37 +53,14 @@ class App extends React.Component {
           <div>
             <GlobalStyle />
             <Header></Header>
-            {/* <Banner></Banner> */}
+            <Banner></Banner>
                 <main>
              <FiltroValor />
              <div>
              <FiltroOrdem /> 
     
              <SessaoProdutos>
-                 <Produto
-                 fotoProduto={'https://picsum.photos/50/50'} 
-                 />
-                <Produto
-                 fotoProduto={'https://picsum.photos/50/50'} 
-                 />
-                <Produto
-                 fotoProduto={'https://picsum.photos/50/50'} 
-                 />
-                <Produto
-                 fotoProduto={'https://picsum.photos/50/50'} 
-                 />
-                <Produto
-                 fotoProduto={'https://picsum.photos/50/50'} 
-                 />
-                 <Produto
-                 fotoProduto={'https://picsum.photos/50/50'} 
-                 />
-                 <Produto
-                 fotoProduto={'https://picsum.photos/50/50'} 
-                 />
-                 <Produto
-                 fotoProduto={'https://picsum.photos/50/50'} 
-                 />
+                 <Produto />
              </SessaoProdutos>
             
              </div>
