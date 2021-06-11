@@ -29,7 +29,6 @@ const GlobalStyle = createGlobalStyle`
   h3 {
     color: #d72d00;
   }
-
   `
 
 const SessaoProdutos = styled.div `
