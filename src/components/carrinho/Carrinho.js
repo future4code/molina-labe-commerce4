@@ -6,7 +6,7 @@ const MenuCarrinho = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 300px;
+    flex-basis: 200px;
     border-left-style: solid;
     border-left-width: thin;
     border-left-color: #5100B5;

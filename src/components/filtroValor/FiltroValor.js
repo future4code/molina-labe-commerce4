@@ -12,6 +12,7 @@ const MenuFiltro = styled.div`
     border-right-style: solid ;
     border-right-width: thin;
     border-right-color: #5100B5;
+    margin-left: 15px;
 `
 
 
