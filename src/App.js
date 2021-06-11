@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
   main {
     /* min-height: 80%; */
     display: flex;
+    justify-content: space-between;
 }
 
   h3 {
@@ -50,24 +51,41 @@ class App extends React.Component {
           <div>
             <GlobalStyle />
             <Header></Header>
-            <Banner></Banner>
+            {/* <Banner></Banner> */}
                 <main>
              <FiltroValor />
              <div>
              <FiltroOrdem /> 
     
              <SessaoProdutos>
-                 <Produto />
-                 <Produto />
-                 <Produto />
-                 <Produto />
-                 <Produto />
-                 <Produto />
-                 <Produto />
-                 <Produto />
+                 <Produto
+                 fotoProduto={'https://picsum.photos/50/50'} 
+                 />
+                <Produto
+                 fotoProduto={'https://picsum.photos/50/50'} 
+                 />
+                <Produto
+                 fotoProduto={'https://picsum.photos/50/50'} 
+                 />
+                <Produto
+                 fotoProduto={'https://picsum.photos/50/50'} 
+                 />
+                <Produto
+                 fotoProduto={'https://picsum.photos/50/50'} 
+                 />
+                 <Produto
+                 fotoProduto={'https://picsum.photos/50/50'} 
+                 />
+                 <Produto
+                 fotoProduto={'https://picsum.photos/50/50'} 
+                 />
+                 <Produto
+                 fotoProduto={'https://picsum.photos/50/50'} 
+                 />
              </SessaoProdutos>
+            
              </div>
-              <Carrinho />          
+             <Carrinho />           
               </main>
             <Footer />
         </div>
