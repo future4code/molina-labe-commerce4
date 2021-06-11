@@ -33,77 +33,18 @@ const TituloProduto = styled.div `
 
 class Produto extends React.Component {
     state = {
-        produtoArray: [
-            {
-                nomeProduto: "Marte",
-                valorProduto: 500,
-                adicionadaCarrinho: false,
-                fotoProduto: 'https://picsum.photos/50/50'
-            },
-            {
-                nomeProduto: "Jupiter",
-                valorProduto: 5000,
-                adicionadaCarrinho: false,
-                fotoProduto: 'https://picsum.photos/50/50'
-            },
-            {
-                nomeProduto: "Saturno",
-                valorProduto: 7500,
-                adicionadaCarrinho: false,
-                fotoProduto: 'https://picsum.photos/50/50'
-            },
-            {
-                nomeProduto: "Netuno",
-                valorProduto: 5900,
-                adicionadaCarrinho: false,
-                fotoProduto: 'https://picsum.photos/50/50'
-            },
-            {
-                nomeProduto: "Urano",
-                valorProduto: 5400,
-                adicionadaCarrinho: false,
-                fotoProduto: 'https://picsum.photos/50/50'
-            },
-            {
-                nomeProduto: "venus",
-                valorProduto: 500880,
-                adicionadaCarrinho: false,
-                fotoProduto: 'https://picsum.photos/50/50'
-            },
-            {
-                nomeProduto: "Marte",
-                valorProduto: 50110,
-                adicionadaCarrinho: false,
-                fotoProduto: 'https://picsum.photos/50/50'
-            },
-            {
-                nomeProduto: "sol",
-                valorProduto: 53200,
-                adicionadaCarrinho: false,
-                fotoProduto: 'https://picsum.photos/50/50'
-            }
-
-        ]
     }
 
-    const renderizaProduto = this.state.produtoArray.map()
-
-    // const Cards = camisetas.map(({img, titulo, preco}) => {
-    //     return (
-    //       <Produtos
-    //         img={img}
-    //         titulo={titulo}
-    //         preco={preco}
-    //       />
-    //     ) 
-    //   })
+/*     const renderizaProduto = this.state.produtoArray.map()
+ */
+    
 
     render() {
         return (
                 <ProdutoCard>
-                    <ProdutosImg src={this.props.fotoProduto} alt={""} />
-                    <ProdutoConteudo>
-                {this.state.produtoArray.map}
+{/*                     <ProdutosImg src={""} alt={""} />
+ */}                 <ProdutoConteudo>
+                        nomeProduto
                     </ProdutoConteudo>
                 </ProdutoCard>
         )

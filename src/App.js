@@ -47,29 +47,108 @@ const SessaoProdutos = styled.div `
 
 
 class App extends React.Component {
+  state = {
+    produtoArray: [
+      {
+          nomeProduto: "Marte",
+          valorProduto: 500,
+          adicionadaCarrinho: false,
+          fotoProduto: 'https://picsum.photos/50/50'
+      },
+      {
+          nomeProduto: "Jupiter",
+          valorProduto: 5000,
+          adicionadaCarrinho: false,
+          fotoProduto: 'https://picsum.photos/50/50'
+      },
+      {
+          nomeProduto: "Saturno",
+          valorProduto: 7500,
+          adicionadaCarrinho: false,
+          fotoProduto: 'https://picsum.photos/50/50'
+      },
+      {
+          nomeProduto: "Netuno",
+          valorProduto: 5900,
+          adicionadaCarrinho: false,
+          fotoProduto: 'https://picsum.photos/50/50'
+      },
+      {
+          nomeProduto: "Urano",
+          valorProduto: 5400,
+          adicionadaCarrinho: false,
+          fotoProduto: 'https://picsum.photos/50/50'
+      },
+      {
+          nomeProduto: "venus",
+          valorProduto: 500880,
+          adicionadaCarrinho: false,
+          fotoProduto: 'https://picsum.photos/50/50'
+      },
+      {
+          nomeProduto: "Marte",
+          valorProduto: 50110,
+          adicionadaCarrinho: false,
+          fotoProduto: 'https://picsum.photos/50/50'
+      },
+      {
+          nomeProduto: "sol",
+          valorProduto: 53200,
+          adicionadaCarrinho: false,
+          fotoProduto: 'https://picsum.photos/50/50'
+      }  
+    ]
+  }
 
-    render(){
-        return (
-          <div>
-            <GlobalStyle />
-            <Header></Header>
-            <Banner></Banner>
-                <main>
-             <FiltroValor />
-             <div>
-             <FiltroOrdem /> 
-    
-             <SessaoProdutos>
-                 <Produto />
-             </SessaoProdutos>
-            
-             </div>
-             <Carrinho />           
-              </main>
-            <Footer />
-        </div>
-        )
-    }
+  
+
+
+  render(){
+
+    /* const renderizaProduto = this.state.produtoArray.map(({foto, nome, valor}) => {
+      return (
+        <Produto
+          fotoProduto={foto.fotoProduto}
+          nomeProduto={nome.nomeProduto}
+          valorProduto={valor.valorProduto}
+        />
+      ) 
+    }) */
+
+    const enderizaProduto = this.state.produtoArray.map((foto, nome, valor)=>{
+      return(
+        <produto
+          fotoProduto={foto.fotoProduto}
+          nomeProduto={nome.nomeProduto}
+          valorProduto={valor.valorProduto}
+        />
+      )
+   })
+   
+
+      return (
+        <div>
+          <GlobalStyle />
+          <Header></Header>
+          <Banner></Banner>
+              <main>
+            <FiltroValor />
+            <div>
+            <FiltroOrdem /> 
+
+              
+
+            <SessaoProdutos>
+               
+            </SessaoProdutos>
+          
+            </div>
+            <Carrinho />           
+            </main>
+          <Footer />
+      </div>
+      )
+  }
 }
 
 export default App;
