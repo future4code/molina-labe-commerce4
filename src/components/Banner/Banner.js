@@ -1,6 +1,6 @@
 import React from 'react';
-import astronalt from '../images/astronaut-resized.png';
-import banner from '../images/banner.webp'
+import astronalt from '../../images/astronaut-resized.png';
+import banner from '../../images/banner.webp'
 import styled from 'styled-components'
 
 
@@ -9,7 +9,7 @@ const Banner1 = styled.img`
 display: flex;
 justify-content: center;
 width: 100vw;
-max-height: 55vh;
+max-height: 65vh;
 `
 
 const Astronalt = styled.img`
