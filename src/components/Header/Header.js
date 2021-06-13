@@ -14,7 +14,7 @@ const ContainerHeader = styled.div `
 function Header () {
     return (
         <ContainerHeader>
-           <h1>LABEX</h1>
+           <h1>LabeX</h1>
         </ContainerHeader>
     )
 }

@@ -47,7 +47,7 @@ const products = [
       id: 1,
       name: 'Mercurio',
       valor: 100,
-      img: mercurio,
+      img: mercurio ,
       quantidade: 1
   },
 
@@ -106,6 +106,8 @@ const products = [
       quantidade: 1
   }
 ]
+
+
 
 class App extends React.Component {
   state = {

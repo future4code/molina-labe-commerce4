@@ -14,7 +14,7 @@ max-height: 65vh;
 
 const Astronalt = styled.img`
 position: absolute;
-top:-33px;
+top: -33px;
 right:30vw ;
 width: 20%;
 transition: transform 1s;
