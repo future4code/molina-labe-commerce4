@@ -15,6 +15,7 @@ const MenuFiltro = styled.div`
     align-items: center;
     justify-content: space-evenly;
     margin: 5px;
+    
 `
 
 
