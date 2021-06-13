@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css';
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
 import mercurio from './images/mercurio.png';
