@@ -13,7 +13,7 @@ const ContainerFooter = styled.div `
 function Footer () {
     return (
         <ContainerFooter>
-        <h4>Oi! Eu moro no footer!</h4>
+        <h4>2021 Labenu</h4>
         </ContainerFooter>
     )
 }

@@ -2,13 +2,21 @@ import React from 'react'
 import './App.css';
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components';
-import Header from './components/header/Header';
-import FiltroValor from './components/filtroValor/FiltroValor'
-import Footer from './components/footer/Footer'
-import Produto from './components/produto/Produto'
-import FiltroOrdem from './components/filtroOrdem/FiltroOrdem'
-import Carrinho from './components/carrinho/Carrinho'
-import Banner from './components/banner/banner'
+import mercurio from './images/mercurio.png';
+import venus from './images/venus.png';
+import marte from './images/marte.png';
+import jupiter from './images/jupiter.png';
+import saturno from './images/saturn2.png';
+import uranio from './images/uranio.png';
+import netuno from './images/netuno.png'
+import plutao from './images/plutao.png'
+import Header from './components/Header/Header';
+import FiltroValor from './components/FiltroValor/FiltroValor'
+import Footer from './components/Footer/Footer'
+import Carrinho from './components/Carrinho/Carrinho'
+import Banner from './components/Banner/Banner'
+import SessaoProdutos from './components/SessaoProdutos/SessaoProdutos';
+
 
 const GlobalStyle = createGlobalStyle`
   
@@ -22,132 +30,176 @@ const GlobalStyle = createGlobalStyle`
     color: #fffeff;
   }
 
-  main {
-    /* min-height: 80%; */
-    display: flex;
-    justify-content: space-between;
-}
-
   h3 {
     color: #d72d00;
   }
-
   `
 
-const SessaoProdutos = styled.div `
- padding: 0px;
- flex-grow: 1;
- display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr;
- grid-template-rows: repeat(4, 270px 20px);
+const MainContainer = styled.main ` 
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 3fr 1fr;
 `
 
+const products = [
+  {
+      id: 1,
+      name: 'Mercurio',
+      valor: 100,
+      img: mercurio ,
+      quantidade: 1
+  },
 
+  {
+      id: 2,
+      name: 'Venus',
+      valor: 130,
+      img: venus,
+      quantidade: 1
+  },
+
+  {
+      id: 3,
+      name: 'Marte',
+      valor: 100,
+      img: marte,
+      quantidade: 1
+  },
+
+  {
+      id: 4,
+      name: 'Jupiter',
+      valor: 150,
+      img: jupiter,
+      quantidade: 1
+  },
+  {
+      id: 5,
+      name: 'Saturno',
+      valor: 200,
+      img: saturno,
+      quantidade: 1
+  },
+
+  {
+      id: 6,
+      name: 'Urano',
+      valor: 300,
+      img: uranio,
+      quantidade: 1
+  },
+
+  {
+      id: 7,
+      name: 'Netuno',
+      valor: 400,
+      img: netuno,
+      quantidade: 1
+  },
+
+  {
+      id: 8,
+      name: 'Plutão',
+      valor: 500,
+      img: plutao,
+      quantidade: 1
+  }
+]
 
 
 
 class App extends React.Component {
   state = {
-    produtoArray: [
-      {
-          nomeProduto: "Marte",
-          valorProduto: 500,
-          adicionadaCarrinho: false,
-          fotoProduto: 'https://picsum.photos/50/50'
-      },
-      {
-          nomeProduto: "Jupiter",
-          valorProduto: 5000,
-          adicionadaCarrinho: false,
-          fotoProduto: 'https://picsum.photos/50/50'
-      },
-      {
-          nomeProduto: "Saturno",
-          valorProduto: 7500,
-          adicionadaCarrinho: false,
-          fotoProduto: 'https://picsum.photos/50/50'
-      },
-      {
-          nomeProduto: "Netuno",
-          valorProduto: 5900,
-          adicionadaCarrinho: false,
-          fotoProduto: 'https://picsum.photos/50/50'
-      },
-      {
-          nomeProduto: "Urano",
-          valorProduto: 5400,
-          adicionadaCarrinho: false,
-          fotoProduto: 'https://picsum.photos/50/50'
-      },
-      {
-          nomeProduto: "venus",
-          valorProduto: 500880,
-          adicionadaCarrinho: false,
-          fotoProduto: 'https://picsum.photos/50/50'
-      },
-      {
-          nomeProduto: "Marte",
-          valorProduto: 50110,
-          adicionadaCarrinho: false,
-          fotoProduto: 'https://picsum.photos/50/50'
-      },
-      {
-          nomeProduto: "sol",
-          valorProduto: 53200,
-          adicionadaCarrinho: false,
-          fotoProduto: 'https://picsum.photos/50/50'
-      }  
-    ]
+
+    minFilter: '10',
+    maxFilter: '10000000',
+    nameFilter: '',
+    productsInCart: []
+  }
+
+  onChangeMinFilter = (event) => {
+    this.setState({minFilter: event.target.value})
+  }
+
+  onChangeMaxFilter = (event) => {
+    this.setState({maxFilter: event.target.value})
+  }
+
+  onChangeNameFilter = (event) => {
+    this.setState({nameFilter: event.target.value})
+  }
+
+  onAddProductToCart = (productId) => {
+    const productInCart = this.state.productsInCart.find(product => productId === product.id)
+
+    if(productInCart) {
+      const newProductsInCart = this.state.productsInCart.map(product => {
+        if(productId === product.id) {
+          return {
+            ...product,
+            quantidade: product.quantidade + 1
+          }
+        }
+
+        return product
+      })
+
+      this.setState({productsInCart: newProductsInCart})
+    } else {
+      const productToAdd = products.find(product => productId === product.id)
+
+      const newProductsInCart = [...this.state.productsInCart, {...productToAdd, quantidade: 1}]
+
+      this.setState({productsInCart: newProductsInCart})
+    }
+  }
+
+  onRemoveProductFromCart = (productId) => {
+    const newProductsInCart = this.state.productsInCart.map((product) => {
+      if(product.id === productId) {
+        return {
+          ...product,
+          quantidade: product.quantidade - 1
+        }
+      }
+      return product
+    }).filter((product) => product.quantidade > 0)
+
+    this.setState({productsInCart: newProductsInCart})
   }
 
   
 
-
   render(){
-
-    /* const renderizaProduto = this.state.produtoArray.map(({foto, nome, valor}) => {
-      return (
-        <Produto
-          fotoProduto={foto.fotoProduto}
-          nomeProduto={nome.nomeProduto}
-          valorProduto={valor.valorProduto}
-        />
-      ) 
-    }) */
-
-    const enderizaProduto = this.state.produtoArray.map((foto, nome, valor)=>{
-      return(
-        <produto
-          fotoProduto={foto.fotoProduto}
-          nomeProduto={nome.nomeProduto}
-          valorProduto={valor.valorProduto}
-        />
-      )
-   })
-   
-
-      return (
+     return (
         <div>
           <GlobalStyle />
-          <Header></Header>
-          <Banner></Banner>
-              <main>
-            <FiltroValor />
-            <div>
-            <FiltroOrdem /> 
-
-              
-
-            <SessaoProdutos>
-               
-            </SessaoProdutos>
-          
-            </div>
-            <Carrinho />           
-            </main>
-          <Footer />
-      </div>
-      )
+          <Header />
+          <Banner />
+          <MainContainer>
+            <FiltroValor 
+              minFilter={this.state.minFilter}
+              maxFilter={this.state.maxFilter}
+              nameFilter={this.state.nameFilter}
+              onChangeMinFilter={this.onChangeMinFilter}
+              onChangeMaxFilter={this.onChangeMaxFilter}
+              onChangeNameFilter={this.onChangeNameFilter}
+            />
+            <SessaoProdutos 
+              products={products}
+              minFilter={this.state.minFilter}
+              maxFilter={this.state.maxFilter}
+              nameFilter={this.state.nameFilter}
+              onAddProductToCart={this.onAddProductToCart}
+            />
+            <Carrinho 
+              productsInCart={this.state.productsInCart}
+              onRemoveProductFromCart={this.onRemoveProductFromCart}
+            />          
+          </MainContainer>
+        <Footer />
+    </div>
+    )
   }
 }
 
